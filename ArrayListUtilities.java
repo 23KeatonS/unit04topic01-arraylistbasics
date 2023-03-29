@@ -27,19 +27,14 @@ public class ArrayListUtilities {
     }
 
     public static void removeLongWords(ArrayList<String> items){
-        /* 
-        for(String word:items){
-            if(word.length()>5){
-                items.remove(word);
-            }
-        }
-        */
+        
         for(int i = 0;i<items.size();i++){
             if(items.get(i).length()>5){
                 items.remove(i);
                 i--;
             }
         }
+        
 
 
 

@@ -41,6 +41,33 @@ public class ArrayListUtilitiesTest {
         assertEquals(expectedOutput,actualOutput);
     }
 
+    @Test
+    public void testRemoveLongWords(){
+        ArrayList<String> input;
+        ArrayList<String> expectedOutput;
+        ArrayList<String> actualOutput;
 
-    
+        input = new ArrayList<>(Arrays.asList("hi","hello","chicken"));
+        ArrayListUtilities.removeLongWords(input);
+        expectedOutput = new ArrayList<>(Arrays.asList("hi","hello"));
+        actualOutput =input;
+        assertEquals(expectedOutput,actualOutput);
+
+
+
+        input = new ArrayList<>(Arrays.asList());
+        ArrayListUtilities.removeLongWords(input);
+        expectedOutput = new ArrayList<>(Arrays.asList());
+        actualOutput =input;
+        assertEquals(expectedOutput,actualOutput);
+
+        input = new ArrayList<>(Arrays.asList("hi","hello"));
+        ArrayListUtilities.removeLongWords(input);
+        expectedOutput = new ArrayList<>(Arrays.asList("hi","hello"));
+        actualOutput =input;
+        assertEquals(expectedOutput,actualOutput);
+    }
+
+
+
 }
