@@ -34,10 +34,19 @@ public class ArrayListUtilities {
                 i--;
             }
         }
-        
+
+    }
 
 
 
+    public static ArrayList<Double> reversed(ArrayList<Double> items){
+        ArrayList<Double> newList = new ArrayList<>();
+        for(int i = items.size()-1;i>=0;i--){
+            int newIndex = 0;
+            newList.set(newIndex,items.get(i));
+            newIndex++;
+        }
+        return newList;
     }
 
 
