@@ -70,4 +70,61 @@ public class ArrayListUtilitiesTest {
 
 
 
+    @Test
+    public void testReversed(){
+
+        ArrayList<Double> input;
+        ArrayList<Double> expectedOutput;
+        ArrayList<Double> actualOutput;
+
+        input = new ArrayList<>(Arrays.asList(3.0,4.0,5.0));
+        expectedOutput = new ArrayList<>(Arrays.asList(5.0,4.0,3.0));
+        actualOutput = ArrayListUtilities.reversed(input);
+        assertEquals(expectedOutput,actualOutput);
+
+
+        input = new ArrayList<>(Arrays.asList());
+        expectedOutput = new ArrayList<>(Arrays.asList());
+        actualOutput = ArrayListUtilities.reversed(input);
+        assertEquals(expectedOutput,actualOutput);
+
+
+        input = new ArrayList<>(Arrays.asList(3.0,4.0));
+        expectedOutput = new ArrayList<>(Arrays.asList(4.0,3.0));
+        actualOutput = ArrayListUtilities.reversed(input);
+        assertEquals(expectedOutput,actualOutput);
+
+
+
+    }
+
+
+    @Test
+    public void testReversedInPlace(){
+        ArrayList<Double> input;
+        ArrayList<Double> expectedOutput;
+        ArrayList<Double> actualOutput;
+
+        input = new ArrayList<>(Arrays.asList(3.0,4.0,5.0));
+        expectedOutput = new ArrayList<>(Arrays.asList(5.0,4.0,3.0));
+        ArrayListUtilities.reverseInPlace(input);
+        actualOutput = input;
+        assertEquals(expectedOutput,actualOutput);
+ 
+        input = new ArrayList<>(Arrays.asList());
+        expectedOutput = new ArrayList<>(Arrays.asList());
+        ArrayListUtilities.reverseInPlace(input);
+        actualOutput = input;
+        assertEquals(expectedOutput,actualOutput);
+
+
+        input = new ArrayList<>(Arrays.asList(3.0,4.0));
+        expectedOutput = new ArrayList<>(Arrays.asList(4.0,3.0));
+        ArrayListUtilities.reverseInPlace(input);
+        actualOutput = input;
+        assertEquals(expectedOutput,actualOutput);
+    }
+
+
+
 }

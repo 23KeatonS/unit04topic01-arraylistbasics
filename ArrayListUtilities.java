@@ -41,12 +41,27 @@ public class ArrayListUtilities {
 
     public static ArrayList<Double> reversed(ArrayList<Double> items){
         ArrayList<Double> newList = new ArrayList<>();
-        for(int i = items.size()-1;i>=0;i--){
-            int newIndex = 0;
-            newList.set(newIndex,items.get(i));
-            newIndex++;
-        }
+        
+            for(int i = items.size()-1;i>=0;i--){
+                newList.add(items.get(i));
+            }
+        
+        
         return newList;
+    }
+
+
+    public static void reverseInPlace(ArrayList<Double> items){
+
+        ArrayList<Double> newList = new ArrayList<>();
+        
+            for(int i = items.size()-1;i>=0;i--){
+                newList.add(items.get(i));
+            }
+            for(int i = 0;i<items.size();i++){
+                items.set(i,newList.get(i));
+            }
+
     }
 
 
